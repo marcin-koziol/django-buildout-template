@@ -1,0 +1,43 @@
+from project.settings import *
+DEBUG = False
+TEMPLATE_DEBUG = False
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': '${deploy-config:db_name}',
+        'USER': '${deploy-config:db_user}',
+        'PASSWORD': '${deploy-config:db_password}',
+        'HOST': '${deploy-config:db_host}',
+        'PORT': '${deploy-config:db_port}',
+        }
+}
+
+MEDIA_ROOT = '${buildout:directory}/media/'
+STATIC_ROOT = '${buildout:directory}/static/'
+
+MEDIA_URL = '/media/'
+THUMBNAIL_DEBUG = False
+STATIC_URL = '/static/'
+
+COMPRESS_ENABLED = True
+COMPRESS_OFFLINE = True
+COMPRESS_JS_FILTERS = ['compressor.filters.jsmin.SlimItFilter']
+BASE_HOSTNAME = '${deploy-config:base_hostname}'
+
+CACHES = {
+    'default': {
+        'BACKEND': '${deploy-config:cache_backend}',
+        'TIMEOUT': ${deploy-config:cache_timeout},
+        'LOCATION': '${deploy-config:cache_location}',
+    }
+}
+
+EMAIL_BACKEND = '${deploy-config:email_backend}'
+EMAIL_HOST = '${deploy-config:email_host}'
+EMAIL_PORT = ${deploy-config:email_port}
+EMAIL_HOST_USER = '${deploy-config:email_host_user}'
+EMAIL_HOST_PASSWORD = '${deploy-config:email_host_password}'
+EMAIL_USE_TLS = '${deploy-config:email_use_tls}'
+CACHE_MIDDLEWARE_SECONDS = ${deploy-config:cache_timeout}
+CACHE_MIDDLEWARE_ANONYMOUS_ONLY = True

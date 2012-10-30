@@ -1,0 +1,6 @@
+from project.development import *
+MEDIA_URL = 'http://127.0.0.1:8081/media/'
+THUMBNAIL_DEBUG = True
+SKINS_DIRECTORY = '${buildout:directory}/onetgp/portals/static/skins/'
+SKINS_URL = 'http://127.0.0.1:8081/static/skins/'
+BASE_HOSTNAME = "localhost"

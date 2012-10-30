@@ -1,0 +1,43 @@
+[buildout]
+
+[deploy-config]
+# do or don't overwrite versions.cfg
+overwrite-picked-versions-file = false
+
+; start apps when supervisord is started
+; in production change to 'true'
+autostart_apps = true
+
+django_fcgi_port = 4003
+
+; use django-${env} while starting django process by supervisor
+env = prod
+
+; Wypelnij nastepujace wartosci i usun sredniki
+; db_host i db_port moga pozostac puste
+
+; == baza danych ==
+;db_name = onetgp
+db_host =
+db_port =
+;db_user =
+;db_password = 
+
+
+; == wysylanie maili ==
+;email_backend = django.core.mail.backends.smtp.EmailBackend
+;email_host =
+;email_port =
+;email_host_user =
+;email_host_password =
+;email_use_tls = True
+
+; == cache ==
+;cache_backend = django.core.cache.backends.locmem.LocMemCache
+;cache_timeout = 15
+;cache_location = 127.0.0.1:11211
+
+; base_hostname to zmienna okreslajaca domene na ktorej bedzie dzialal
+; CMS admina systemowego
+
+base_hostname = 127.0.0.1
