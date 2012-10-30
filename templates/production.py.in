@@ -39,5 +39,6 @@ EMAIL_PORT = ${deploy-config:email_port}
 EMAIL_HOST_USER = '${deploy-config:email_host_user}'
 EMAIL_HOST_PASSWORD = '${deploy-config:email_host_password}'
 EMAIL_USE_TLS = '${deploy-config:email_use_tls}'
+
 CACHE_MIDDLEWARE_SECONDS = ${deploy-config:cache_timeout}
 CACHE_MIDDLEWARE_ANONYMOUS_ONLY = True

@@ -5,11 +5,7 @@ server {
     root ${buildout:directory};
     expires max;
   }
-  location /favicon.ico {
-    root ${buildout:directory}/onetgp/portals/static/skins/;
-    expires max;
-  }
- 
+
   location /media {
     root ${buildout:directory};
     expires max;

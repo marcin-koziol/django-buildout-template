@@ -37,7 +37,3 @@ db_port =
 ;cache_timeout = 15
 ;cache_location = 127.0.0.1:11211
 
-; base_hostname to zmienna okreslajaca domene na ktorej bedzie dzialal
-; CMS admina systemowego
-
-base_hostname = 127.0.0.1
