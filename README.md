@@ -17,12 +17,6 @@ DATABASES = {
     }
 }
 
-PREVIEW_HOST = 'http://generator.localhost:6660'
-SMARTTV_GENERATOR_PATH = os.path.join(
-    os.environ['HOME'], 'projects', 'rample', 'builder')
-
-BASE_HOSTNAME = 'localhost:8080'
-
 STATIC_ROOT = os.path.join(
     os.environ['HOME'], 'projects', 'example', 'static'
 )
